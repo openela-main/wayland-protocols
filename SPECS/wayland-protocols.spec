@@ -1,5 +1,5 @@
 Name:           wayland-protocols
-Version:        1.31
+Version:        1.37
 Release:        1%{?dist}
 Summary:        Wayland protocols that adds functionality not available in the core protocol
 
@@ -23,6 +23,8 @@ wayland-protocols.
 
 %package devel
 Summary:        Wayland protocols that adds functionality not available in the core protocol
+Provides:       %{name}-static = %{version}-%{release}
+BuildArch:      noarch
 
 %description devel
 wayland-protocols contains Wayland protocols that adds functionality not
@@ -48,6 +50,10 @@ wayland-protocols.
 %{_datadir}/%{name}/
 
 %changelog
+* Thu Nov 20 2025 Olivier Fourdan <ofourdan@redhat.com> - 1.37-1
+- Update to 1.37
+  Resolves: RHEL-129827
+
 * Tue Nov 29 2022 Neal Gompa <ngompa@centosproject.org> - 1.31-1
 - Update to 1.31
   Resolves: rhbz#2149338
