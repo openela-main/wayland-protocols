@@ -2,8 +2,8 @@
 %global debug_package %{nil}
 
 Name:           wayland-protocols
-Version:        1.45
-Release:        1%{?dist}
+Version:        1.49
+Release:        2%{?dist}
 Summary:        Wayland protocols that adds functionality not available in the core protocol
 
 License:        MIT
@@ -13,7 +13,7 @@ Source0:        https://gitlab.freedesktop.org/wayland/%{name}/-/releases/%{vers
 BuildRequires:  gcc
 BuildRequires:  gcc-g++
 BuildRequires:  meson
-BuildRequires:  wayland-devel
+BuildRequires:  wayland-devel >= 1.25
 
 %description
 wayland-protocols contains Wayland protocols that adds functionality not
@@ -52,6 +52,14 @@ wayland-protocols.
 %{_includedir}/%{name}/
 
 %changelog
+* Thu Jul 11 2026 Tomas Pelka <tpelka@redhat.com> - 1.49-2
+- Bump the relese due to https://gitlab.com/redhat/centos-stream/rpms/wayland-protocols/-/merge_requests/21#note_3547323763
+  Resolves: https://redhat.atlassian.net/browse/RHEL-191589
+
+* Thu Jul 09 2026 Olivier Fourdan <ofourdan@redhat.com> - 1.49-1
+- Update to 1.49
+  Resolves: https://redhat.atlassian.net/browse/RHEL-191589
+
 * Fri Jun 13 2025 Neal Gompa <ngompa@centosproject.org> - 1.45-1
 - Update to 1.45
   Resolves: RHEL-96927
